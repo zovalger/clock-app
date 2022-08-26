@@ -1,18 +1,26 @@
 :root {
+	// letras
 
 	--main-font: sans-serif;
 	--font-size: 20px;
+	--font-size-large: 3rem;
 	--font-main-color: #000;
 	--font-second-color: #111;
 
-
+	// colores principales
 	--main-color: #e2c890;
 	--second-color: #222;
-
 	--main-background-color: #f0f8ff;
 
-	--border-radius: 25px;
+	--second-background-color: #f0f8ff;
 
+	--nav-height: 2rem;
+
+	--button-square-size: 2.5rem;
+	--button-square-small-size: 2rem;
+
+	// bores
+	--border-radius: 25px;
 
 	--border-main-size: 5px;
 	--border-second-size: 2px;
@@ -21,21 +29,20 @@
 	--border-second-color: #000a;
 	--border-third-color: #0005;
 
+	// tamaños
+	--margin-min: 5px;
+
+	--padding-min: 5px;
 
 	// --logo: url("../../img/logo.jpg");
 	--logo: url("../../img/logo_zovalger_20220720.svg");
 }
 
-
-
 html {
 	font-family: var(--main-font);
 }
 
-
-
 body.dark-theme {
-
 	--main-color: #292929;
 
 	--main-background-color: #000;
@@ -44,8 +51,6 @@ body.dark-theme {
 	--border-second-color: #8b8b8baa;
 
 	--font-second-color: #f5f5f5;
-
-
 }
 
 * {
@@ -54,7 +59,7 @@ body.dark-theme {
 	// scroll-behavior: smooth;
 
 	margin: 0;
-	padding: 0%;
+	padding: 0;
 	box-sizing: border-box;
 	// color: var(--font-main-color);
 	// font-size: 24px;
@@ -72,13 +77,35 @@ img {
 	object-fit: cover;
 }
 
-button {
+button,
+input {
 	border: none;
-	// background: #fff;
+	background: none;
 
-	padding: 3px;
-
-	// &:active {
-	// 	background-color: #0002;
-	// }
+	&:hover {
+		background-color: hsla(0, 0%, 50%, 0.25);
+	}
+	&:active {
+		background-color: hsla(0, 0%, 50%, 0.5);
+	}
+	// background: none;
+	// padding: 1rem;
 }
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+// button {
+// 	border: none;
+// 	// background: #fff;
+
+// 	padding: 3px;
+
+// 	// &:active {
+// 	// 	background-color: #0002;
+// 	// }
+// }

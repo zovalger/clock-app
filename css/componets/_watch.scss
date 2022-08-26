@@ -1,0 +1,339 @@
+@mixin active($display) {
+	display: none;
+
+	&.active {
+		display: $display;
+	}
+}
+
+// ********************************************************************
+//  							cada reloj dentro de clocks-app
+// ********************************************************************
+
+.watch {
+	// border: 1px solid black;
+	// border-radius: 5px;
+	// overflow-y: hidden;
+	margin-bottom: var(--margin-min);
+
+	display: inline-flex;
+	flex-grow: 1;
+
+	width: 300px;
+
+	flex-direction: column;
+
+	// justify-content: center;
+	align-items: center;
+
+	// ********************************************************************
+	//  						nav de la parte superior del relog
+	// ********************************************************************
+
+	.top {
+		position: relative;
+		display: flex;
+
+		width: 100%;
+		margin-bottom: var(--margin-min);
+		.name {
+			margin-left: 5px;
+
+			padding: var(--padding-min);
+			display: inline-block;
+		}
+		.switch {
+			margin-left: auto;
+			width: var(--button-square-small-size);
+			height: var(--button-square-small-size);
+			// margin-right: var(--margin-min);
+			// margin-top: var(--margin-min);
+			// position: absolute;
+			// margin-left: auto;
+		}
+	}
+
+	.delayed {
+		@include active(block);
+	}
+
+	// ********************************************************************
+	//  					form en donde estan los inputs de hrs mins sec
+	// ********************************************************************
+	.time-seted {
+		@include active(block);
+	}
+
+	.set-time {
+		@include active(flex);
+
+		width: 100%;
+		flex-grow: 1;
+		// display: flex;
+		align-items: center;
+
+		input {
+			&::-webkit-inner-spin-button,
+			&::-webkit-outer-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+
+
+			flex-grow: 1;
+			text-align: center;
+			width: 10px;
+
+			font-size: var(--font-size-large);
+		}
+	}
+
+	// ********************************************************************
+	//  								reloj donde se pone el tiempo
+	// ********************************************************************
+
+	.clock {
+		
+		font-size: var(--font-size-large);
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+	}
+
+	// ********************************************************************
+	// 								 botones controladores
+	// ********************************************************************
+
+	.controls_container {
+		display: inline-flex;
+
+		width: 100%;
+		button {
+			@include active(inline-block);
+
+			flex-grow: 1;
+			// flex:1 1;
+
+			width: 4rem;
+
+			height: var(--button-square-size);
+
+			// flex-grow: 1;
+		}
+	}
+
+	// ********************************************************************
+	//  								personalizacion para cada modo del relog
+	// ********************************************************************
+
+	&.stopwatch {
+		border: 3px solid hsl(234, 100%, 50%);
+		background-color: hsla(187, 100%, 50%, 0.10);
+
+		.set-time,
+		.time-seted {
+			display: none;
+		}
+		// background-color: hsla(221, 97%, 70%, 0.514);
+	}
+
+	&.timer {
+		border: 3px solid hsl(60, 100%, 50%);
+		background-color:  hsl(60, 100%, 50%,10%);
+
+		&.complete {
+			animation-duration: 0.5s;
+			animation-name: alert;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+
+		.clock {
+			@include active(block);
+		}
+	}
+}
+
+@keyframes alert {
+	from {
+		// margin-left: 100%;
+		// width: 300%
+	}
+
+	to {
+		background-color: yellow;
+	}
+}
+
+// .clock_container {
+// 	// position: ;
+
+// 	// border: 1px solid black;
+// 	background-color: none;
+// 	display: flex;
+// 	text-align: center;
+// 	justify-content: center;
+// 	align-items: center;
+
+// 	flex-grow: 1;
+
+// 	// order: 2;
+// 	.clock {
+// 		.time {
+
+// 			// float: left;
+// 			font-size: 50px;
+// 		}
+
+// 		.sm {
+// 			float: left;
+// 			font-size: 30px;
+
+// 		}
+
+// 		// font-weight: 600;
+// 	}
+
+// 	transition: border-radius 0.5s,
+// 	flex-grow 0.2s,
+// 	box-shadow 0.7s,
+// 	background-color 1s;
+
+// 	&.list-open {
+// 		// flex-grow: 1;
+
+// 		background-color: var(--main-color);
+// 		transition: border-radius 0.5s, flex-grow 1s, box-shadow 0.05s,
+// 			background-color 1s;
+
+// 		flex-grow: 0.1;
+// 		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+// 		border-bottom: var(--border-main-size) solid var(--border-main-color);
+
+// 		border-radius: 0 0 var(--border-radius) var(--border-radius);
+// 	}
+// }
+
+// .partial-list {
+
+// 	flex-grow: 0;
+// 	// display: none;
+// 	height: 1px;
+// 	display: flex;
+// 	flex-direction: column;
+// 	transition: flex-grow 0.5s;
+// 	overflow: hidden;
+
+// 	& * {
+
+// 		color: var(--font-second-color);
+// 	}
+
+// 	&.active {
+// 		// display: block;
+// 		flex-grow: 1;
+// 		margin: 16px 10px;
+// 	}
+
+// 	.content>div,
+// 	.headers {
+// 		display: grid;
+// 		grid-template-columns: 0.5fr 1fr 1fr;
+// 		text-align: center;
+// 		margin-bottom: 5px;
+// 	}
+
+// 	.headers {
+// 		border-bottom: var(--border-second-size) solid var(--border-second-color);
+// 		border-radius: var(--border-radius);
+
+// 		font-weight: 500;
+// 		padding-bottom: 5px;
+// 	}
+
+// 	.content {
+// 		display: inline-flex;
+// 		// height: 1px;
+// 		// height: max-content;
+// 		// height: auto;
+// 		flex-direction: column-reverse;
+// 		// justify-content: flex-end;
+// 		// justify-content: flex-start;
+
+// 		&>div:first-child {
+// 			margin-bottom: auto;
+// 			// border: 1px solid saddlebrown;
+// 		}
+
+// 		& div .ms {
+// 			font-size: small;
+
+// 		}
+
+// 		// align-content: flex-start;
+// 		overflow-y: auto;
+// 		// padding-bottom: 1px;
+// 		// transition: height 0.5s;
+// 	}
+
+// }
+
+// .controls_container {
+// 	margin-top: auto;
+
+// 	display: flex;
+
+// 	justify-content: space-around;
+// 	padding: 10px 0;
+
+// 	transition: border-radius 0.5s, box-shadow 0.7s, background-color 1s;
+
+// 	&.list-open {
+// 		transition: border-radius 0.5s, box-shadow 0.1s, background-color 1s;
+// 		// transition-duration: 0.5s;
+// 		background-color: var(--main-color);
+
+// 		border-radius: 25px 25px 0 0;
+
+// 		border-top: var(--border-main-size) solid var(--border-main-color);
+
+// 		box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
+// 	}
+
+// 	button {
+// 		display: none;
+
+// 		&.active {
+// 			display: inline-block;
+// 		}
+
+// 		width: 5rem;
+// 		height: 2.5rem;
+// 		border-radius: 25px;
+// 		background-color: #7772;
+// 		color: var(--font-main-color);
+
+// 		// &:hover {
+// 		// 	background-color: #00000010;
+// 		// }
+
+// 		&:active {
+// 			background-color: #7775;
+// 		}
+
+// 		&:disabled {
+// 			background: #7770;
+// 		}
+
+// 		span {
+// 			// color: white;
+// 			font-size: 35px;
+// 		}
+
+// 	}
+
+// 	.reset {
+// 		color: red;
+
+// 	}
+// }

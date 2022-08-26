@@ -1,99 +1,262 @@
 <!DOCTYPE html>
 <html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
 
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<style>
+			.material-symbols-outlined {
+				font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+			}
+		</style>
 
-	<style>
-		.material-symbols-outlined {
-			font-variation-settings:
-				'FILL' 0,
-				'wght' 400,
-				'GRAD' 0,
-				'opsz' 48
-		}
-	</style>
+		<link rel="stylesheet" href="./css/app.css" />
+		<title>Clock app</title>
+	</head>
 
+	<!-- <body class="dark-theme"> -->
+	<body>
+		<div class="app">
+			<!-- ****************************************************************************************************** -->
+			<!-- 										panel para seleccionar las secciones de la app 					-->
+			<!-- ****************************************************************************************************** -->
+			<!-- 
+			<header>
+				<button>menu</button>
+				<button>+</button>
+			</header> -->
 
-	<link rel="stylesheet" href="./css/app.css" />
-	<title>Document</title>
-</head>
+			<div class="app-section-container">
+				<!-- *************************************************** -->
+				<!-- 										alarma													-->
+				<!-- *************************************************** -->
 
-<body class="dark-theme">
-	<!-- toda la app -->
-	<div class="app">
-		<div class="nav">
-			<button class="nav-backButton">
-				<span class="material-symbols-outlined">
-					menu
-				</span>
-			</button>
-			<span class="tittle">Stopwatch</span>
-			<button class="nav-toggle-theme" style="margin-left: auto;">
+				<div class="app-section active" id="clocksApp">
+					<div class="header">
+						<h2>alarma dentro de 9 horas 16 minutos</h2>
 
-				<!-- <span class="material-symbols-outlined">
-					dark_mode
-				</span> -->
-				<span class="material-symbols-outlined">
-					light_mode
-				</span>
-			</button>
+						<p>vie., 26 de ago. 6:00 a. m.</p>
+					</div>
+
+					<div class="tools-bar-nav">
+						<div class="left">
+							<!-- <button>
+								<span class="material-symbols-outlined"> arrow_back </span>
+							</button> -->
+							<div class="name">alarma</div>
+						</div>
+
+						<button>
+							<span class="material-symbols-outlined"> add </span>
+						</button>
+						<button>
+							<span class="material-symbols-outlined"> more_vert </span>
+						</button>
+					</div>
+
+					<div id="" class="content">
+						<div class="item-list">
+							<div class="number">
+								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
+							</div>
+
+							<div class="date">vie, 26 ago.</div>
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+
+						<div class="item-list">
+							<div class="number">
+								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
+							</div>
+
+							<div class="date">vie, 26 ago.</div>
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+						<div class="item-list">
+							<div class="number">
+								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
+							</div>
+
+							<div class="date">vie, 26 ago.</div>
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+						<div class="item-list">
+							<div class="number">
+								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
+							</div>
+
+							<div class="date">vie, 26 ago.</div>
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+						<div class="item-list">
+							<div class="number">
+								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
+							</div>
+
+							<div class="date">vie, 26 ago.</div>
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+
+						<div class="item-list">
+							<div class="number">
+								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
+							</div>
+
+							<div class="date">vie, 26 ago.</div>
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+						<div class="item-list">
+							<div class="number">
+								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
+							</div>
+
+							<div class="date">vie, 26 ago.</div>
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+						<div class="item-list">
+							<div class="number">
+								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
+							</div>
+
+							<div class="date">vie, 26 ago.</div>
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+						<div class="item-list">
+							<div class="number">
+								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
+							</div>
+
+							<div class="date">vie, 26 ago.</div>
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+						<div class="item-list">
+							<div class="number">
+								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
+							</div>
+
+							<div class="date">vie, 26 ago.</div>
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+						<div class="item-list">
+							<div class="number">
+								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
+							</div>
+
+							<div class="date">vie, 26 ago.</div>
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+					</div>
+
+					<button class="btn-go-top-list">
+						<span class="material-symbols-outlined"> keyboard_arrow_up </span>
+					</button>
+				</div>
+
+				<!-- *************************************************** -->
+				<!-- 										relojes													-->
+				<!-- *************************************************** -->
+			</div>
+
+			<div class="left-panel" id="appSectionsManager">
+				<button class="" data-app-section="clocksApp">
+					<span class="material-symbols-outlined"> alarm </span>
+				</button>
+
+				<button data-app-section="rechargesApp">
+					<span class="material-symbols-outlined"> timer </span>
+				</button>
+				<button>
+					<span class="material-symbols-outlined"> hourglass_empty </span>
+				</button>
+			</div>
 		</div>
 
-		<div id="stopwatch" class="content">
-			<div class="clock_container">
-				<!-- <div class="clock">00:00:00.00</div> -->
-				<div class="clock">
-					<span class="time"> 00:00.</span><span class="ms">00 </span>
-				</div>
+		<!-- ***************************************** templates ***************************************** -->
+
+		<!-- cronometro -->
+		<template id="watch-template">
+			<div class="top">
+				<div class="name">name</div>
+				<button class="switch">
+					<span class="material-symbols-outlined"> timer </span>
+				</button>
 			</div>
 
-			<div class="partial-list">
-				<div class="headers">
-					<div>Vuelta</div>
-					<div>T. Parcial</div>
-					<div>T. Total</div>
-				</div>
-				<div class="content">
-					<div class="row">
-						<div>999</div>
-						<div>99:59:59</div>
-						<div>99:59:59</div>
-					</div>
-					<div class="row">
-						<div>999</div>
-						<div>99:59:59</div>
-						<div>99:59:59</div>
-					</div>
-				</div>
+			<div class="time-seted">00:00</div>
+			<div class="delayed">tiempo extra</div>
+
+			<div class="clock">
+				<span class="time"> 00:00.</span><span class="ms">00 </span>
 			</div>
+
+			<form class="set-time active">
+				<input name="hrs" type="number" min="0" placeholder="00" />
+				<input name="mins" type="number" placeholder="00" />
+				<input name="secs" type="number" placeholder="00" />
+				<input type="submit" value="" hidden />
+
+				<!-- 
+				<div class="timers-list">
+					<div>02:00</div>
+					<div>10:00</div>
+					<div>01:02:00</div>
+				</div>
+			-->
+			</form>
 
 			<div class="controls_container">
 				<button class="reset active">
 					<span class="material-symbols-outlined"> replay </span>
 				</button>
-				<button class="partial active">
-					<span class="material-symbols-outlined"> flag </span>
-				</button>
+
 				<button class="pause active">
 					<span class="material-symbols-outlined"> pause </span>
 				</button>
 				<button class="start active">
-					<span class="material-symbols-outlined">
-						play_arrow
-					</span>
+					<span class="material-symbols-outlined"> play_arrow </span>
 				</button>
 			</div>
-		</div>
-	</div>
+		</template>
 
-	<!-- todos los Script de la app -->
-	<script src="./js/main.js" type="module"></script>
-</body>
-
+		<!-- <script src="./js/main.js" type="module"></script> -->
+	</body>
 </html>

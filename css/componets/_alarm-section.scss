@@ -1,0 +1,19 @@
+.item-list {
+	.number {
+    	user-select: none;
+
+		margin-right: auto;
+		.hour {
+			font-size: large;
+		}
+		.am-pm {
+			font-size: small;
+		}
+	}
+	.date {
+		font-size: small;
+		margin-right: 0.5rem;
+	user-select: none;
+
+  }
+}

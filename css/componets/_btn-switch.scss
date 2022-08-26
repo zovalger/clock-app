@@ -1,0 +1,39 @@
+.wrap-toggle {
+	// padding: 5rem;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height:20px;
+	background-color: #555;
+	border-radius: 40px;
+	cursor: pointer;
+}
+
+.switch::after {
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 30px;
+	background-color: white;
+	left: 2px;
+	top: 2px;
+	transition: all 0.4s;
+}
+
+input[type="checkbox"]:checked + .switch::after {
+	transform: translateX(20px);
+	background-color: #333;
+}
+
+input[type="checkbox"]:checked + .switch {
+	background-color: #888;
+}
+
+.offscreen {
+	position: absolute;
+	left: -9999999px;
+}
