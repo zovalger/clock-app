@@ -8,29 +8,34 @@
 
 .app {
 	// background-color: white;
-
 	width: 100vw;
 	height: 100vh;
 	display: flex;
 	overflow: hidden;
-	background-color: #eee;
+
+	position: relative;
+
+	background-color: var(--main-color);
 
 	flex-direction: column;
 }
 
-.left-panel {
+.controls {
 	display: flex;
 	// flex-direction: column;
 
 	// flex-grow: 0.2;
 	// padding: var(--margin-min);
+	// padding-bottom: 1rem;
+
 	justify-content: space-around;
 	// max-width: calc(var(--button-square-size) + calc(var(--margin-min)));
 	button {
 		user-select: none;
 
-		width: var(--button-square-size);
+		width: calc(var(--button-square-size) * 2);
 		height: var(--button-square-size);
+		
 
 		&.selected {
 			background-color: hsla(0, 0%, 50%, 0.25);
@@ -49,14 +54,15 @@
 }
 
 .header {
-	display: flex;
+	@include active(flex);
+
 	height: 50%;
+	max-height: 25vh;
+	padding: 2rem;
 
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-
-	padding: 2rem;
 
 	text-align: center;
 
@@ -159,7 +165,7 @@
 	padding: 1.5rem;
 	border-radius: 25px;
 
-	background-color: hsla(0, 0%, 0%, 0.496);
+	background-color: var(--second-color);
 }
 
 .btn-go-top-list {

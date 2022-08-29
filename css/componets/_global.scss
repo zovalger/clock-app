@@ -1,18 +1,19 @@
 :root {
-	// letras
-
+	
+	
+	// colores principales
+	// --main-color: #e2c890;
+	--main-color: #fff;
+	--second-color: hsla(0, 0%, 100%, 0.295);
+	--main-background-color: #f0f8ff;
+	--second-background-color: #f0f8ff;	
 	--main-font: sans-serif;
+
+	// letras
 	--font-size: 20px;
 	--font-size-large: 3rem;
 	--font-main-color: #000;
 	--font-second-color: #111;
-
-	// colores principales
-	--main-color: #e2c890;
-	--second-color: #222;
-	--main-background-color: #f0f8ff;
-
-	--second-background-color: #f0f8ff;
 
 	--nav-height: 2rem;
 
@@ -26,7 +27,7 @@
 	--border-second-size: 2px;
 
 	--border-main-color: none;
-	--border-second-color: #000a;
+	--border-second-color: #000a;	
 	--border-third-color: #0005;
 
 	// tamaños

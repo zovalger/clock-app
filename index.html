@@ -38,7 +38,7 @@
 				<!-- *************************************************** -->
 
 				<div class="app-section active" id="clocksApp">
-					<div class="header">
+					<div class="header active">
 						<h2>alarma dentro de 9 horas 16 minutos</h2>
 
 						<p>vie., 26 de ago. 6:00 a. m.</p>
@@ -72,118 +72,6 @@
 								<label for="toggle" class="switch"></label>
 							</div>
 						</div>
-
-						<div class="item-list">
-							<div class="number">
-								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
-							</div>
-
-							<div class="date">vie, 26 ago.</div>
-							<div class="wrap-toggle">
-								<input type="checkbox" id="toggle" class="offscreen" />
-								<label for="toggle" class="switch"></label>
-							</div>
-						</div>
-						<div class="item-list">
-							<div class="number">
-								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
-							</div>
-
-							<div class="date">vie, 26 ago.</div>
-							<div class="wrap-toggle">
-								<input type="checkbox" id="toggle" class="offscreen" />
-								<label for="toggle" class="switch"></label>
-							</div>
-						</div>
-						<div class="item-list">
-							<div class="number">
-								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
-							</div>
-
-							<div class="date">vie, 26 ago.</div>
-							<div class="wrap-toggle">
-								<input type="checkbox" id="toggle" class="offscreen" />
-								<label for="toggle" class="switch"></label>
-							</div>
-						</div>
-						<div class="item-list">
-							<div class="number">
-								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
-							</div>
-
-							<div class="date">vie, 26 ago.</div>
-							<div class="wrap-toggle">
-								<input type="checkbox" id="toggle" class="offscreen" />
-								<label for="toggle" class="switch"></label>
-							</div>
-						</div>
-
-						<div class="item-list">
-							<div class="number">
-								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
-							</div>
-
-							<div class="date">vie, 26 ago.</div>
-							<div class="wrap-toggle">
-								<input type="checkbox" id="toggle" class="offscreen" />
-								<label for="toggle" class="switch"></label>
-							</div>
-						</div>
-						<div class="item-list">
-							<div class="number">
-								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
-							</div>
-
-							<div class="date">vie, 26 ago.</div>
-							<div class="wrap-toggle">
-								<input type="checkbox" id="toggle" class="offscreen" />
-								<label for="toggle" class="switch"></label>
-							</div>
-						</div>
-						<div class="item-list">
-							<div class="number">
-								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
-							</div>
-
-							<div class="date">vie, 26 ago.</div>
-							<div class="wrap-toggle">
-								<input type="checkbox" id="toggle" class="offscreen" />
-								<label for="toggle" class="switch"></label>
-							</div>
-						</div>
-						<div class="item-list">
-							<div class="number">
-								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
-							</div>
-
-							<div class="date">vie, 26 ago.</div>
-							<div class="wrap-toggle">
-								<input type="checkbox" id="toggle" class="offscreen" />
-								<label for="toggle" class="switch"></label>
-							</div>
-						</div>
-						<div class="item-list">
-							<div class="number">
-								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
-							</div>
-
-							<div class="date">vie, 26 ago.</div>
-							<div class="wrap-toggle">
-								<input type="checkbox" id="toggle" class="offscreen" />
-								<label for="toggle" class="switch"></label>
-							</div>
-						</div>
-						<div class="item-list">
-							<div class="number">
-								<span class="hour">12:00</span> <span class="am-pm">a.m.</span>
-							</div>
-
-							<div class="date">vie, 26 ago.</div>
-							<div class="wrap-toggle">
-								<input type="checkbox" id="toggle" class="offscreen" />
-								<label for="toggle" class="switch"></label>
-							</div>
-						</div>
 					</div>
 
 					<button class="btn-go-top-list">
@@ -196,7 +84,7 @@
 				<!-- *************************************************** -->
 			</div>
 
-			<div class="left-panel" id="appSectionsManager">
+			<div class="controls" id="appSectionsManager">
 				<button class="" data-app-section="clocksApp">
 					<span class="material-symbols-outlined"> alarm </span>
 				</button>
@@ -207,6 +95,75 @@
 				<button>
 					<span class="material-symbols-outlined"> hourglass_empty </span>
 				</button>
+			</div>
+
+			<div class="fill-screen bg-primary" id="edit-alarm">
+				<div class="hour-time-select">
+					<input type="number" placeholder="24" />
+					:
+					<input type="number" placeholder="00" />
+				</div>
+				<div class="item-list more-options-alarm">
+					<div class="row date">
+						<div>hoy-jue., 25 ago.</div>
+						<button>
+							<span class="material-symbols-outlined"> date_range </span>
+						</button>
+					</div>
+					<div class="row week">
+						<button>d</button>
+						<button>l</button>
+						<button class="selected">m</button>
+						<button>x</button>
+						<button>j</button>
+						<button>v</button>
+						<button>s</button>
+					</div>
+					<div class="row alarm-name">
+						<input type="text" placeholder="nombre de alarma" />
+					</div>
+
+					<div class=" setting-bar-switch">
+						<div class="info">
+							<div class="name">sonido de alarma</div>
+							<div class="description">sound</div>
+						</div>
+						<div class="switch-container">
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+					</div>
+					<div class=" setting-bar-switch">
+						<div class="info">
+							<div class="name">vibracion</div>
+							<div class="description">sound</div>
+						</div>
+						<div class="switch-container">
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+					</div>
+					<div class=" setting-bar-switch">
+						<div class="info">
+							<div class="name">Aplazar</div>
+							<div class="description">sound</div>
+						</div>
+						<div class="switch-container">
+							<div class="wrap-toggle">
+								<input type="checkbox" id="toggle" class="offscreen" />
+								<label for="toggle" class="switch"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="controls">
+					<button class="">cancelar</button>
+					<button class="">guardar</button>
+				</div>
 			</div>
 		</div>
 
