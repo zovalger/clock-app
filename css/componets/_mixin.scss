@@ -1,0 +1,7 @@
+@mixin active($display) {
+	display: none;
+
+	&.active {
+		display: $display;
+	}
+}

@@ -37,7 +37,7 @@
 				<!-- 										alarma													-->
 				<!-- *************************************************** -->
 
-				<div class="app-section active" id="clocksApp">
+				<div class="app-section active" id="alarms-section">
 					<div class="header active">
 						<h2>alarma dentro de 9 horas 16 minutos</h2>
 
@@ -84,12 +84,16 @@
 				<!-- *************************************************** -->
 			</div>
 
+			<!-- *************************************************** -->
+			<!-- 										navegador de secciones					-->
+			<!-- *************************************************** -->
+
 			<div class="controls" id="appSectionsManager">
-				<button class="" data-app-section="clocksApp">
+				<button class="" data-app-section="alarms-section">
 					<span class="material-symbols-outlined"> alarm </span>
 				</button>
 
-				<button data-app-section="rechargesApp">
+				<button data-app-section="timer-section">
 					<span class="material-symbols-outlined"> timer </span>
 				</button>
 				<button>
@@ -97,11 +101,108 @@
 				</button>
 			</div>
 
+			<!-- *************************************************** -->
+			<!-- 										editor de alarmas								-->
+			<!-- *************************************************** -->
+
 			<div class="fill-screen bg-primary" id="edit-alarm">
 				<div class="hour-time-select">
-					<input type="number" placeholder="24" />
+					<div class="hours-select">
+						<div class="hour"><span></span></div>
+						<div class="hour"><span>00</span></div>
+						<div class="hour"><span>01</span></div>
+						<div class="hour"><span>02</span></div>
+						<div class="hour"><span>03</span></div>
+						<div class="hour"><span>04</span></div>
+						<div class="hour"><span>05</span></div>
+						<div class="hour"><span>06</span></div>
+						<div class="hour"><span>07</span></div>
+						<div class="hour"><span>08</span></div>
+						<div class="hour"><span>09</span></div>
+						<div class="hour"><span>10</span></div>
+						<div class="hour"><span>11</span></div>
+						<div class="hour"><span>12</span></div>
+						<div class="hour"><span>13</span></div>
+						<div class="hour"><span>14</span></div>
+						<div class="hour"><span>15</span></div>
+						<div class="hour"><span>16</span></div>
+						<div class="hour"><span>17</span></div>
+						<div class="hour"><span>18</span></div>
+						<div class="hour"><span>19</span></div>
+						<div class="hour"><span>20</span></div>
+						<div class="hour"><span>21</span></div>
+						<div class="hour"><span>22</span></div>
+						<div class="hour"><span>23</span></div>
+						<div class="hour"><span></span></div>
+					</div>
 					:
-					<input type="number" placeholder="00" />
+					<div class="minutes-select">
+						<div class="minutes"><span></span></div>
+
+						<div class="minutes"><span>00</span></div>
+						<div class="minutes"><span>01</span></div>
+						<div class="minutes"><span>02</span></div>
+						<div class="minutes"><span>03</span></div>
+						<div class="minutes"><span>04</span></div>
+						<div class="minutes"><span>05</span></div>
+						<div class="minutes"><span>06</span></div>
+						<div class="minutes"><span>07</span></div>
+						<div class="minutes"><span>08</span></div>
+						<div class="minutes"><span>09</span></div>
+						<div class="minutes"><span>10</span></div>
+						<div class="minutes"><span>11</span></div>
+						<div class="minutes"><span>12</span></div>
+						<div class="minutes"><span>13</span></div>
+						<div class="minutes"><span>14</span></div>
+						<div class="minutes"><span>15</span></div>
+						<div class="minutes"><span>16</span></div>
+						<div class="minutes"><span>17</span></div>
+						<div class="minutes"><span>18</span></div>
+						<div class="minutes"><span>19</span></div>
+						<div class="minutes"><span>20</span></div>
+						<div class="minutes"><span>21</span></div>
+						<div class="minutes"><span>22</span></div>
+						<div class="minutes"><span>23</span></div>
+						<div class="minutes"><span>24</span></div>
+						<div class="minutes"><span>25</span></div>
+						<div class="minutes"><span>26</span></div>
+						<div class="minutes"><span>27</span></div>
+						<div class="minutes"><span>28</span></div>
+						<div class="minutes"><span>29</span></div>
+						<div class="minutes"><span>30</span></div>
+						<div class="minutes"><span>31</span></div>
+						<div class="minutes"><span>32</span></div>
+						<div class="minutes"><span>33</span></div>
+						<div class="minutes"><span>34</span></div>
+						<div class="minutes"><span>35</span></div>
+						<div class="minutes"><span>36</span></div>
+						<div class="minutes"><span>37</span></div>
+						<div class="minutes"><span>38</span></div>
+						<div class="minutes"><span>39</span></div>
+						<div class="minutes"><span>40</span></div>
+						<div class="minutes"><span>41</span></div>
+						<div class="minutes"><span>42</span></div>
+						<div class="minutes"><span>43</span></div>
+						<div class="minutes"><span>44</span></div>
+						<div class="minutes"><span>45</span></div>
+						<div class="minutes"><span>46</span></div>
+						<div class="minutes"><span>47</span></div>
+						<div class="minutes"><span>48</span></div>
+						<div class="minutes"><span>49</span></div>
+						<div class="minutes"><span>50</span></div>
+						<div class="minutes"><span>51</span></div>
+						<div class="minutes"><span>52</span></div>
+						<div class="minutes"><span>53</span></div>
+						<div class="minutes"><span>54</span></div>
+						<div class="minutes"><span>55</span></div>
+						<div class="minutes"><span>56</span></div>
+						<div class="minutes"><span>57</span></div>
+						<div class="minutes"><span>58</span></div>
+						<div class="minutes"><span>59</span></div>
+						<div class="minutes"><span></span></div>
+					</div>
+
+					<!-- .meridian -->
 				</div>
 				<div class="item-list more-options-alarm">
 					<div class="row date">
@@ -123,7 +224,7 @@
 						<input type="text" placeholder="nombre de alarma" />
 					</div>
 
-					<div class=" setting-bar-switch">
+					<div class="setting-bar-switch">
 						<div class="info">
 							<div class="name">sonido de alarma</div>
 							<div class="description">sound</div>
@@ -135,7 +236,7 @@
 							</div>
 						</div>
 					</div>
-					<div class=" setting-bar-switch">
+					<div class="setting-bar-switch">
 						<div class="info">
 							<div class="name">vibracion</div>
 							<div class="description">sound</div>
@@ -147,7 +248,7 @@
 							</div>
 						</div>
 					</div>
-					<div class=" setting-bar-switch">
+					<div class="setting-bar-switch">
 						<div class="info">
 							<div class="name">Aplazar</div>
 							<div class="description">sound</div>
